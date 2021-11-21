@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Doughnut Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <script async="" src="./JS/analytics.js"></script> 
+    <script src="./JS/Chart.bundle.js"></script>
+    <script src="./JS/utils.js"></script>
+
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Main canvas -->
+    <div id="canvas-holder">
+        <!-- <iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe> -->
+        <canvas id="chart-area" width="100" height="25"></canvas>
+    </div>
+    
+
+
+    <script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+    var config = {
+        type: 'doughnut',
+        data: {
+        datasets: [{
+            data: [12, 2, 0, 5],
+            backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.orange,
+                window.chartColors.yellow,
+                window.chartColors.green,
+                window.chartColors.blue,
+            ],
+            label: 'Dataset 2'
+        }],
+
+        labels: [
+            "1Red",
+            "2Orange",
+            "3Yellow",
+            "4Green",
+            "5Blue"
+        ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'ชื่อ'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(ctx, config);
+    };
+    var colorNames = Object.keys(window.chartColors);
+    </script>
+
+    <section>
+        <h1>ทดสอบ</h1>
+        <button id="RemoveData">Remove Dataset</button>
+    </section>
+
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <hr> Vertical checkbox:
+            <br>
+
+            
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+
+                <label class="btn">
+                <input id="fluency"  onchange="checkFluency()" type="checkbox" name='email1'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ</span>
+                </label>
+
+
+                <label class="btn">
+                <input type="checkbox" name='email2'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Alert Email</span>
+                </label>
+
+                <label class="btn">
+                <input type="checkbox" name='email3'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span> Account Email</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/myButton.js"></script>
+    </body>
+</html>
+
+
+
+
+
+        <!-- //ส่วนอื่น -->
+        <!-- <div class="myChartFrame">
+            <canvas id="myChart" width="100" height="25" style="background-color: bisque;"></canvas>
+        <script>
+
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [12, 19, 3, 5],
+                        backgroundColor: [
+                            window.chartColors.red,
+                            window.chartColors.orange,
+                            window.chartColors.yellow,
+                            window.chartColors.green,
+                            window.chartColors.blue,
+                        ],
+                        label: 'Dataset 1'
+                    }],
+                    labels: [
+                        "1Red",
+                        "2Orange",
+                        "3Yellow",
+                        "4Green",
+                        "5Blue"
+                    ]
+                },
+                options: {
+                    legend: {
+                        position: 'top',
+                        hidden: true,
+
+                        
+                        function(e, legendItem, legend) {
+                            const index = legendItem.datasetIndex;
+                            const ci = legend.chart;
+                            if (ci.isDatasetVisible(index)) {
+                                ci.hide(index);
+                                legendItem.hidden = true;
+                            } else {
+                                ci.show(index);
+                                legendItem.hidden = false;
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'ชื่อ'
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true,
+                        easing: 'easeOutCirc',
+                    }
+                }
+            });
+        </script>
+    </div> -->
