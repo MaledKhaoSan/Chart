@@ -3,8 +3,19 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Doughnut Chart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- //Script -->
+    <script async="" src="./JS/analytics.js"></script> 
+    <script src="./JS/Chart.bundle.js"></script>
+    <script src="./JS/utils.js"></script>
     <link rel="stylesheet" href="./CSS/style.css">
     
+
+    <!-- //GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
     <!-- //bootstrap font jquery -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
@@ -13,16 +24,6 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style>@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');</style>
     
-    <!-- //GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    
-    <!-- //Script -->
-    <script async="" src="./JS/analytics.js"></script> 
-    <script src="./JS/Chart.bundle.js"></script>
-    <script src="./JS/utils.js"></script>
 
     <style>
     canvas {
@@ -35,13 +36,26 @@
 
 <body>
 
-    <section>
+    <section class="Main-Section">
         <div class="container">
-            <img src="IMG/MainStudent.png" class="MainStudent"  style="z-index: 10;">
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            <div style="display: unset;">
+                <img src="IMG/F1.png" class="Food1"  style="z-index: 5;">
+                <img src="IMG/F2.png" class="Food2"  style="z-index: 5;">
+                <img src="IMG/F3.png" class="Food3"  style="z-index: 5;">
+                <img src="IMG/F4.png" class="Food4"  style="z-index: 5;">
+                <img src="IMG/F5.png" class="Food5"  style="z-index: 5;">
+            </div>
+
+            <img src="IMG/text1.png" class="MainText"  style="z-index: 5;">
+            <img src="IMG/MainStudent_animated0.png" class="MainStudent MainStudent_animated0"  style="z-index: 7;">
+            <img src="IMG/MainStudent_animated1.png" class="MainStudent_animated1"  style="z-index: 7;">
+            <img src="IMG/MainStudent_animated2.png" class="MainStudent_animated2"  style="z-index: 7;">
+            <img src="IMG/MainStudent.png" class="MainStudent"  style="z-index: 6;">
+
+            <img src="IMG/MainGum.png" class="MainGum"  style="z-index: 9;">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ตั้งค่า</span>
 
             <div class="main-graph-container">
-                <img src="IMG/MainGum.png" class="MainGum"  style="z-index: -1;">
                 <canvas  id="chart-area" class="main-graph" width="100" height="100"></canvas>
             </div>
     
@@ -185,7 +199,17 @@
         };
     </script>
 
+    <script src=".JS/Animations.js"></script>
     <script src="./JS/myButton.js"></script>
+
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     </body>
 </html>
 
