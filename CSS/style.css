@@ -21,7 +21,7 @@ html body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
   background-color: #111;
@@ -51,12 +51,53 @@ html body {
   margin-left: 50px;
 }
 
+/* Food */
+.Food1{
+  position: absolute;
+  width: 9%;
+  left: 2%;
+  top: 28%;
+  transform: translate(-50%,-50%) rotate(120deg);
+  filter: drop-shadow(4px -6px 4px #0c0c0c7c);
+}
 
 
+.Food2{
+  position: absolute;
+  width: 40%;
+  left: 20%;
+  top: 100%;
+  transform: translate(-50%,-50%) rotate(120deg);
+  filter: drop-shadow(-8px -6px 4px #0c0c0c7c);
+}
 
 
+.Food3{
+  position: absolute;
+  width: 20%;
+  left: 27%;
+  top: -20%;
+  transform: translate(-50%,-50%) rotate(150deg);
+  filter: drop-shadow(12px 6px 4px #0c0c0c7c);
+}
 
+.Food4{
+  position: absolute;
+  width: 20%;
+  left: 98%;
+  top: 77%;
+  transform: translate(-50%,-50%) rotate(150deg);
+  filter: drop-shadow(12px 6px 4px #0c0c0c7c);
+}
 
+.Food5{
+  position: absolute;
+  width: 40%;
+  left: 95%;
+  top: 23%;
+  transform: translate(-50%,-50%) rotate(30deg);
+  filter: drop-shadow(12px 6px 4px #0c0c0c7c);
+}
 
 
 
@@ -115,31 +156,59 @@ html body {
   z-index: 12; 
   position: absolute; 
   left: 50%;
-  top: 45%;
-  width: 40%;
+  top: 52%;
+  width: 48%;
   transform: translate(-50%,-50%);
-  /* opacity: 50% */
-  /* display: none; */
+  opacity: 0%;
+  display: none;
 }
 
 
 .MainGum{
   position: absolute;
-  width: 81%;
-  top: 59%;
+  width: 0%;
+  top: 59.2%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .MainStudent{
   position: absolute;
-  width: 80%;
+  width: 65%;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.MainStudent_animated1{
+  position: absolute;
+  width: 65%;
+  top: 60%;
+  left: 50.0%;
+  transform: translate(-50%, -50%);
+}
+
+.MainStudent_animated2{
+  position: absolute;
+  width: 65%;
+  top: 60%;
+  left: 50.0%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.MainText{
+  position: absolute;
+  width: 31%;
+  left: 67%;
+  top: 28%;
+  transform: translate(-50%,-50%) rotate(0deg);
+  /* filter: drop-shadow(4px -6px 4px #0c0c0c7c); */
+}
+
   .bubble {
     position: absolute;
     border-radius: 50%;
+    opacity: 0;
   }
   
   .pink-bubble {
