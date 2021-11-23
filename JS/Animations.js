@@ -1,3 +1,10 @@
+window.onload = function() {
+	if(!window.location.hash) {
+		window.location = window.location + '#Information';
+		window.location.reload();
+	}
+}
+
 
 // let MainAnimated = gsap.timeline({
 //     scrollTrigger: {
