@@ -6,12 +6,19 @@
     <link rel="stylesheet" href="./CSS/style.css">
     
 
-
+    <!-- //bootstrap font jquery -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
+    
+    <!-- //GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    
+    <!-- //Script -->
     <script async="" src="./JS/analytics.js"></script> 
     <script src="./JS/Chart.bundle.js"></script>
     <script src="./JS/utils.js"></script>
@@ -26,90 +33,104 @@
 </head>
 
 <body>
-    <!-- Main canvas -->
-    <div id="canvas-holder">
-        <!-- <iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe> -->
-        <canvas id="chart-area" width="100" height="25"></canvas>
-    </div>
+
+    <section>
+        <div class="container">
+            <img src="IMG/MainStudent.png" class="MainStudent"  style="z-index: 10;">
+
+            <div class="main-graph-container">
+                <img src="IMG/MainGum.png" class="MainGum"  style="z-index: -1;">
+                <canvas  id="chart-area" class="main-graph" width="100" height="100"></canvas>
+            </div>
+    
+            <div class="ux-container">
+                <div class="col-xs-12">
+                    <div class="btn-group " data-toggle="buttons">
+                        <label class="btn">
+                        <input id="Food01"  onchange="Food01()" type="checkbox" name='ก๋วยเตี๋ยว'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ1</span></label>
+        
+                        <label class="btn">
+                        <input id="Food02"  onchange="Food02()" type="checkbox" name='อาหารจานเดียว'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ2</span></label>
+        
+                        <label class="btn">
+                        <input id="Food03"  onchange="Food03()" type="checkbox" name='สเต๊ก'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ3</span></label>
+
+                        <div class="main-form-container">
+                            <div class="group">      
+                                <input type="text" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                                <!-- <input type="text" required> -->
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="Form-Label">จำนวนเงิน</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bubble pink-bubble"></div>
+            <div class="bubble blue-bubble"></div>
+            <div class="bubble small-p-bubble"></div>
+            <div class="bubble small-b-bubble"></div>
+        </div>
+        <!-- Main canvas -->
+        <!-- <div id="canvas-holder">
+            <iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+            <canvas style="background-color:wheat;" id="chart-area" width="100" height="25"></canvas>
+        </div> -->
+    </section>
     
 
 
     <script>
-    var randomScalingFactor = function() {
-        return Math.round(Math.random() * 100);
-    };
-    var config = {
-        type: 'doughnut',
-        data: {
-        datasets: [{
-            data: [12, 2, 7, 5],
-            backgroundColor: [
-                window.chartColors.red,
-                window.chartColors.orange,
-                window.chartColors.yellow,
-                window.chartColors.green,
-                window.chartColors.blue,
-            ],
-            label: 'Dataset 2'
-        }],
+        var randomScalingFactor = function() {
+            return Math.round(Math.random() * 100);
+        };
+        var config = {
+            type: 'doughnut',
+            data: {
+            datasets: [{
+                data: [12, 2, 7, 5, 5],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 2'
+            }],
 
-        labels: [
-            "1Red",
-            "2Orange",
-            "3Yellow",
-            "4Green",
-            "5Blue"
-        ]
-        },
-        options: {
-            responsive: true,
-            legend: {
-                position: 'top',
+            labels: [
+                "ก๋วยเตี๋ยว",
+                "อาหารจานเดียว",
+                "สเต๊ก",
+                "ของหวาน",
+                "เครื่องดื่ม/น้ำผลไม้"
+            ]
             },
-            title: {
-                display: true,
-                text: 'ชื่อ'
-            },
-            animation: {
-                animateScale: true,
-                animateRotate: true
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'ชื่อ'
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
             }
-        }
-    };
+        };
 
-    window.onload = function() {
-        var ctx = document.getElementById("chart-area").getContext("2d");
-        window.myDoughnut = new Chart(ctx, config);
-    };
-    var colorNames = Object.keys(window.chartColors);
+        window.onload = function() {
+            var ctx = document.getElementById("chart-area").getContext("2d");
+            window.myDoughnut = new Chart(ctx, config);
+        };
+        var colorNames = Object.keys(window.chartColors);
     </script>
 
-    <section>
-        <h1>ทดสอบ</h1>
-        <button id="RemoveData">Remove Dataset</button>
-    </section>
-
-
-
-    <div class="row">
-        <div class="col-xs-12">
-            <hr> Vertical checkbox:
-            <br>
-
-            
-            <div class="btn-group " data-toggle="buttons">
-
-                <label class="btn">
-                <input id="Food01"  onchange="Food01()" type="checkbox" name='ก๋วยเตี๋ยว'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ1</span></label>
-
-                <label class="btn">
-                <input id="Food02"  onchange="Food02()" type="checkbox" name='อาหารจานเดียว'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ2</span></label>
-
-                <label class="btn">
-                <input id="Food03"  onchange="Food03()" type="checkbox" name='สเต๊ก'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ3</span></label>
-            </div>
-        </div>
-    </div>
     <script src="./JS/myButton.js"></script>
     </body>
 </html>
@@ -117,6 +138,32 @@
 
 
 
+
+
+
+    <!-- <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr> Vertical checkbox:
+                    <br>
+        
+                    
+                    <div class="btn-group " data-toggle="buttons">
+        
+                        <label class="btn">
+                        <input id="Food01"  onchange="Food01()" type="checkbox" name='ก๋วยเตี๋ยว'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ1</span></label>
+        
+                        <label class="btn">
+                        <input id="Food02"  onchange="Food02()" type="checkbox" name='อาหารจานเดียว'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ2</span></label>
+        
+                        <label class="btn">
+                        <input id="Food03"  onchange="Food03()" type="checkbox" name='สเต๊ก'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span> ทดสอบ3</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
         <!-- //ส่วนอื่น -->
         <!-- <div class="myChartFrame">
