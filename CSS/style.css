@@ -55,7 +55,7 @@ html body {
 .Food1{
   position: absolute;
   width: 9%;
-  left: 2%;
+  left: -20%;
   top: 28%;
   transform: translate(-50%,-50%) rotate(120deg);
   filter: drop-shadow(4px -6px 4px #0c0c0c7c);
@@ -76,7 +76,7 @@ html body {
   position: absolute;
   width: 20%;
   left: 27%;
-  top: -20%;
+  top: -40%;
   transform: translate(-50%,-50%) rotate(150deg);
   filter: drop-shadow(12px 6px 4px #0c0c0c7c);
 }
@@ -84,7 +84,7 @@ html body {
 .Food4{
   position: absolute;
   width: 20%;
-  left: 98%;
+  left: 120%;
   top: 77%;
   transform: translate(-50%,-50%) rotate(150deg);
   filter: drop-shadow(12px 6px 4px #0c0c0c7c);

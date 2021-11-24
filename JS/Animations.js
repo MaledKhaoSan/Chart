@@ -48,10 +48,10 @@ var tl = gsap.timeline();
 
     tl.to(".bubble", 1, {autoAlpha:1, ease: Linear.easeNone}, "<+0.1");
 
-    tl.from(".Food1", 1.9,{rotation: 60, left:"-20%"},"<");
+    tl.to(".Food1", 1.9,{rotation: 60, left:"2%"},"<");
     tl.from(".Food2", 1.7,{top:"140%", left:"25%"},"<");
-    tl.from(".Food3", 2,{rotation: -1, top:"-40%"},"<");
-    tl.from(".Food4", 1.8,{rotation: 60, left:"120%"},"<")
+    tl.to(".Food3", 2,{rotation: -1, top:"0%"},"<");
+    tl.to(".Food4", 1.8,{rotation: 60, left:"98%"},"<")
     tl.from(".Food5", 1.9,{top:"-15%", left:"130%"},"<");
 
 
