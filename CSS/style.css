@@ -17,6 +17,16 @@ html body {
     background-color: #f4f4f4;
 }
 
+.SettingsNav{
+  position:absolute;
+  left: 5%;
+  top: 6%;
+  transform: translate(-50%,-50%);
+  font-family: 'Kanit', sans-serif; 
+  font-size: 1.15vw;
+  color: #000000;
+  padding-left: 2%; 
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -85,17 +95,17 @@ html body {
   position: absolute;
   width: 20%;
   left: 120%;
-  top: 77%;
+  top: 85%;
   transform: translate(-50%,-50%) rotate(150deg);
-  filter: drop-shadow(12px 6px 4px #0c0c0c7c);
+  filter: drop-shadow(-9px 11px 4px #0c0c0c46);
 }
 
 .Food5{
   position: absolute;
   width: 40%;
-  left: 95%;
-  top: 23%;
-  transform: translate(-50%,-50%) rotate(30deg);
+  left: 130%;
+  top: -25%;
+  transform: translate(-50%,-50%) rotate(0deg);
   filter: drop-shadow(12px 6px 4px #0c0c0c7c);
 }
 
@@ -198,10 +208,10 @@ html body {
 
 .MainText{
   position: absolute;
-  width: 31%;
-  left: 67%;
-  top: 28%;
-  transform: translate(-50%,-50%) rotate(0deg);
+  width: 10%;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%,-50%) rotate(-90deg);
   /* filter: drop-shadow(4px -6px 4px #0c0c0c7c); */
 }
 
@@ -228,10 +238,10 @@ html body {
   }
   
   .small-b-bubble {
-    width: 50px;
-    height: 50px;
-    right: 40px;
-    bottom: 85px;
+    width: 160px;
+    height: 160px;
+    right: 20px;
+    bottom: -20px;
     background-color: var(--small-b-bubble);
   }
   
@@ -294,14 +304,14 @@ label input[type="radio"]:checked ~ i.fa.fa-circle-o{
     display: none;
 }
 label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
-    color: #7AA3CC;    display: inline;
+    color: #ffffff;    display: inline;
 }
 label:hover input[type="radio"] ~ i.fa {
-color: #7AA3CC;
+color: #ffffff;
 }
 
 label input[type="checkbox"] ~ i.fa.fa-square-o{
-    color: #c8c8c8;    display: inline;
+    color: #9c9797;    display: inline;
 }
 label input[type="checkbox"] ~ i.fa.fa-check-square-o{
     display: none;
@@ -310,22 +320,22 @@ label input[type="checkbox"]:checked ~ i.fa.fa-square-o{
     display: none;
 }
 label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o{
-    color: #7AA3CC;    display: inline;
+    color: #a5d3e9;    display: inline;
 }
 
 label:hover input[type="checkbox"] ~ i.fa {
-color: #7AA3CC;
+color: #ffffff;
 }
 
 div[data-toggle="buttons"] label.active{
-    color: #7AA3CC;
+    color: #ffffff;
 }
 
 div[data-toggle="buttons"] label {
   display: inline-block;
   /* left: 50px; */
   /* padding: 6px 12px; */
-  padding: 2vh;
+  padding: 2.2vh;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
@@ -346,7 +356,7 @@ div[data-toggle="buttons"] label {
 }
 
 div[data-toggle="buttons"] label:hover {
-color: #7AA3CC;
+color: #ffffff;
 }
 
 div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
@@ -420,10 +430,10 @@ input:focus 		{ outline:none; }
 
 /* active state */
 input:focus ~ .Form-Label, input:valid ~ .Form-Label 		{
-  top:-45px;
+  top:-50px;
   left: -10px;
-  font-size:16px;
-  color:#5264AE;
+  font-size:17px;
+  color:#ffffff;
 }
 
 /* BOTTOM BARS ================================= */
