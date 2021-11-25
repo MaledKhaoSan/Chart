@@ -52,9 +52,9 @@ function changePicture(){
   var mylist = Math.floor(Math.random() * shopNamelist.length);
   function getChanged(){
       document.getElementById('RandomShopName').innerHTML = shopNamelist[mylist];
-      document.getElementById("RandomShopImg").style.display = "none";
+      //document.getElementById("RandomShopImg").style.display = "none";
       document.getElementById("RandomShopImg").src="IMG/"+(shopImglist[mylist])+".png";
-      document.getElementById("RandomShopImg").style.display = "unset";
+      //document.getElementById("RandomShopImg").style.display = "unset";
   }
   getChanged();
 }
