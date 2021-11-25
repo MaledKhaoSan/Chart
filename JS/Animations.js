@@ -20,7 +20,7 @@ window.onload = function() {
 // });
 var tl = gsap.timeline();
     // tl.from(".MainStudent, .MainStudent_animated0, .MainStudent_animated1", 3, {autoAlpha:0, yoyo:true, ease: Linear.easeNone}, "<");
-    tl.to(".MainText", 1.8,{top: "28%", width:"31%", rotation:"0"},"<")
+    tl.to(".MainText", 1.8,{top: "25%", width:"31%", rotation:"0"},"<")
     tl.to(".MainStudent_animated0, .MainStudent_animated1", 0, {autoAlpha:0}, ">+3");
     tl.to(".MainStudent_animated2", 0, {autoAlpha:1}, "<");
 

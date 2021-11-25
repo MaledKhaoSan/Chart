@@ -37,6 +37,7 @@
 <body>
 
     <section class="Main-Section">
+        <span class="SettingsNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ตั้งค่า</span>
         <div class="container">
             <div style="display: unset;">
                 <img src="IMG/F1.png" class="Food1"  style="z-index: 5;">
@@ -53,7 +54,7 @@
             <img src="IMG/MainStudent.png" class="MainStudent"  style="z-index: 2;">
 
             <img src="IMG/MainGum.png" class="MainGum"  style="z-index: 9;">
-            <span class="SettingsNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ตั้งค่า</span>
+            <!-- <span class="SettingsNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ตั้งค่า</span> -->
 
             <div class="main-graph-container">
                 <canvas  id="chart-area" class="main-graph" width="100" height="100"></canvas>
@@ -101,18 +102,34 @@
                             <label class="Form-Label">จำนวนเงิน</label>
                         </div>
                     </div>
+
+
+                    <button id="myRandomButton" class="button button1" onclick="myFunction(), closeNav(), openRandomNav()">Green</button>
                 </div>
             </div>
         </div>
     </div>
+    <div id="myRandomnav" class="Randomnav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <h1 style="color: white; text-align: center;"> เราขอแนะนำ</h1>
+        <img id="RandomShopImg" src="/IMG/R1.png" onclick="changePicture()">
+        <h1 id="RandomShopName" style="color: white; text-align: center;"> ร้านสุดเท่</h1>
+
+        
+        <button id="myRandomButton" class="" onclick="changePicture()">test</button>
+        <div class="mainRandom-container"></div>
+    </div>
 
     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
+        function changePicture(){
+            var shopImglist = ['R1', 'R2', 'R3'];
+            var shopNamelist = ['1', '2', '3'];
+            var mylist = Math.floor(Math.random() * shopNamelist.length);
+            function getChanged(){
+                document.getElementById('RandomShopName').innerHTML = shopNamelist[mylist];
+                document.getElementById("RandomShopImg").src="/IMG/"+(shopImglist[mylist])+".png";
+            }
+            getChanged();
         }
     </script>
 
@@ -170,6 +187,7 @@
         };
     </script>
 
+    <script src="./JS/Randoms.js"></script>
     <script src="./JS/Animations.js"></script>
     <script src="./JS/myButton.js"></script>
 
@@ -182,6 +200,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
