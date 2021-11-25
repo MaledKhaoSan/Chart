@@ -20,14 +20,15 @@ window.onload = function() {
 // });
 var tl = gsap.timeline();
     // tl.from(".MainStudent, .MainStudent_animated0, .MainStudent_animated1", 3, {autoAlpha:0, yoyo:true, ease: Linear.easeNone}, "<");
+
     tl.to(".MainText", 1.8,{top: "25%", width:"31%", rotation:"0"},"<")
-    tl.to(".MainStudent_animated0, .MainStudent_animated1", 0, {autoAlpha:0}, ">+3");
+    tl.to(".MainStudent_animated0, .MainStudent_animated1", 0, {autoAlpha:0}, ">+2");
     tl.to(".MainStudent_animated2", 0, {autoAlpha:1}, "<");
 
     tl.to(".MainGum", 1, {width: "5%", ease: Power1.easeInOut}, ">+0.1");
     tl.to(".MainGum", 1, {width: "36%", ease: Power3.easeIn}, ">");
 
-    tl.to(".main-graph-container", 0, {display: "unset"}, ">");
+    tl.set(".main-graph-container",{display: "unset"}, ">");
     tl.add( function(){ 
         myChart.config.data.datasets[0].data[0] = 0;
         myChart.config.data.datasets[0].data[1] = 0;
@@ -55,7 +56,8 @@ var tl = gsap.timeline();
     tl.to(".Food4", 1.8,{rotation: 30, left:"98%"},"<")
     tl.to(".Food5", 1.9,{rotation:30, top:"23%", left:"95%"},"<");
 
-    tl.to(".MainStudent, .MainStudent_animated2, .MainText, .MainGum", 1.9, {autoAlpha:0, ease: Power3.easeIn}, "<");
+    tl.from(".SettingsNav", 2,{opacity:0},"<");
+    tl.to(".MainStudent, .MainStudent_animated2, .MainText, .MainGum", 1.2, {autoAlpha:0, ease: Power3.easeOut}, "<");
 
 
 

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Mitr:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
 
 
     :root {
@@ -63,6 +64,17 @@ html body {
 }
 /* Side Nav */
 
+.myRandom-Header{
+  color: white; 
+  text-align: center;
+  font-family: 'Thasadith', sans-serif;
+
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  width: 30%;
+  transform: translate(-50%,-50%);
+}
 /* Random side Nav */
 .Randomnav {
   height: 0;
@@ -71,7 +83,7 @@ html body {
   z-index: 1000;
   bottom: 0;
   left: 0;
-  background-color: rgba(17, 17, 17, 0.849);
+  background-color: rgba(0, 0, 0, 0.753);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -79,8 +91,8 @@ html body {
 .Randomnav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 50px;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
@@ -100,14 +112,23 @@ html body {
 
 /* Main-random=container */
 .mainRandom-container{
+}
 
+.RandomShopName{
+  color: white; 
+  text-align: center;
+  font-family: 'Thasadith', sans-serif;
+  font-size: 5vw;
+  position: absolute;
+  left: 50%;
+  top: 23%;
+  transform: translate(-50%,-50%);
 }
 
 .RandomShopImg {
-  display: block;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   width: 30%;
   transform: translate(-50%,-50%);
 }

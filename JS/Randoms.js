@@ -1,23 +1,3 @@
-// var myarray= new Array(
-//     "ความท้อแท้และล้มเหลว เป็นสองก้าวที่สำคัญที่สุดในการก้าวไปสู่ความสำเร็จ",
-//     "เอาจริงนะเว้ย แกแบ่งคนอื่นเก่งบ้างก็ได้ แต่ละคนมีเอกลักษณ์อยู่แล้ว",
-//     "วันพรุ่งนี้ ทุกอย่างจะดีขึ้นเอง",
-//     "เข้าใจความรู้สึกของเธอนะ รู้ไว้ว่าเราจะอยู่ข้างเธอเสมอ",
-//     "ขอให้สนุกกับงานนะคะ",
-//     "วันนี้อาจจะเหนื่อย และมีเรื่องให้ต้องทุกข์ใจเยอะ ตอนนี้เรามาพักสักหน่อยกันเถอะ",
-//     "ไม่ต้องดีกว่าใครแค่ทำให้ดีกว่าตัวเองคนเมื่อวานก็พอแล้ว",
-//     "เมื่อไหร่ที่คุณสามารถปล่อยอดีตให้ผ่านไปได้ สิ่งที่ดียิ่งกว่าจะตามมาแน่นอน",
-//     "ไม่ต้องเสียใจหรอก เพราะเธอทำดีที่สุดแล้ว",
-//     "ช่วงเวลาดีๆ จะกลายเป็นความทรงจำที่ดี และช่วงเวลาแย่ๆ จะกลายเป็นบทเรียนที่ดี",
-//     "เวลาจะเยียวยาทุกอย่าง เธออาจรู้สึกแย่ โคตรจะแย่ แต่เดี๋ยวมันก็จะผ่านไปเป็นแค่อดีต",
-//     "วันพรุ่งนี้ ทุกอย่างจะต้องดีขึ้นแน่นอน",
-//     "ฉันมีความสุขที่ได้มองเธอยิ้มและเติบโตจากตรงนี้เสมอ",
-//     "ท้ออยู่ใช่ไหมถ้าไม่ไหวก็พักบ้างนะ",
-//     );
-// var random = myarray[Math.floor(Math.random() * myarray.length)];
-
-
-
 
 //Side Nav
 function openNav() {
@@ -29,20 +9,168 @@ function closeNav() {
 }
 //Random Nav
 
-function openRandomNav() {
-  document.getElementById("myRandomnav").style.height = "100%";
-}
-//Random function
 
-// const $el = document.querySelector("RandomShopImg");
-// // Loading finished
-// setTimeout(() => {
-//   // $el.classList.remove("loader");
-//   // document.querySelector("loader").classList.remove("loader");
-//   // $el
-//     // .querySelectorAll(".hide-text")
-//     // .forEach((el) => el.classList.remove("hide-text"));
-// }, 3000);
+
+var ctx = document.getElementById("chart-area").getContext("2d");
+var myChart = new Chart(ctx, config);
+
+function openRandomNav() {
+  closeNav();
+  var myRandomColorChnage = gsap.timeline();
+    myRandomColorChnage.set(".SettingsNav",{display: "none"},"0")
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[0] ="#abbcd6";
+      myChart.config.data.datasets[0].borderColor[0] ="#abbcd6";
+      myChart.update();
+    },"<" );
+
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[1] ="#abbcd6";
+      myChart.config.data.datasets[0].borderColor[1] ="#abbcd6";
+      myChart.update();
+    },">+0.1" );
+
+
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[2] ="#abbcd6";
+      myChart.config.data.datasets[0].borderColor[2] ="#abbcd6";
+      myChart.update();
+    },">+0.1" );
+
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[0] ="#d4ddeb";
+      myChart.config.data.datasets[0].borderColor[0] ="#d4ddeb";
+      myChart.update();
+    },">+0.1" );
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[3] ="#abbcd6";
+      myChart.config.data.datasets[0].borderColor[3] ="#abbcd6";
+      myChart.update();
+    },">+0.1" );
+
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[1] ="#d4ddeb";
+      myChart.config.data.datasets[0].borderColor[1] ="#d4ddeb";
+      myChart.update();
+    },">+0.1" );
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[4] ="#abbcd6";
+      myChart.config.data.datasets[0].borderColor[4] ="#abbcd6";
+      myChart.update();
+    },">+0.1" );
+
+    myRandomColorChnage.add( function ColorChnageLoop(){
+    var myRandomColorChnageLoop = gsap.timeline({defaults:{},repeat:1, repeatDelay:0});
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[2] ="#d4ddeb";
+          myChart.config.data.datasets[0].borderColor[2] ="#d4ddeb";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[0] ="#abbcd6";
+          myChart.config.data.datasets[0].borderColor[0] ="#abbcd6";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[3] ="#d4ddeb";
+          myChart.config.data.datasets[0].borderColor[3] ="#d4ddeb";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[1] ="#abbcd6";
+          myChart.config.data.datasets[0].borderColor[1] ="#abbcd6";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[4] ="#d4ddeb";
+          myChart.config.data.datasets[0].borderColor[4] ="#d4ddeb";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[2] ="#abbcd6";
+          myChart.config.data.datasets[0].borderColor[2] ="#abbcd6";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[0] ="#d4ddeb";
+          myChart.config.data.datasets[0].borderColor[0] ="#d4ddeb";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[3] ="#abbcd6";
+          myChart.config.data.datasets[0].borderColor[3] ="#abbcd6";
+          myChart.update();
+        },">+0.1" );
+      
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[1] ="#d4ddeb";
+          myChart.config.data.datasets[0].borderColor[1] ="#d4ddeb";
+          myChart.update();
+        },">+0.1" );
+        myRandomColorChnageLoop.add( function(){ 
+          myChart.config.data.datasets[0].backgroundColor[4] ="#abbcd6";
+          myChart.config.data.datasets[0].borderColor[4] ="#abbcd6";
+          myChart.update();
+        },">+0.1" );
+      })
+    //Finished Loop
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[2] ="#d4ddeb";
+      myChart.config.data.datasets[0].borderColor[2] ="#d4ddeb";
+      myChart.update();
+    },">+2" );
+
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[3] ="#d4ddeb";
+      myChart.config.data.datasets[0].borderColor[3] ="#d4ddeb";
+      myChart.update();
+    },">+0.1" );
+    myRandomColorChnage.add( function(){ 
+      myChart.config.data.datasets[0].backgroundColor[4] ="#d4ddeb";
+      myChart.config.data.datasets[0].borderColor[4] ="#d4ddeb";
+      myChart.update();
+    },">+0.1" );
+
+    myRandomColorChnage.add( function(){ 
+      document.getElementById("myRandomnav").style.height = "100%";
+      applyBlur();
+    },"<" );
+}
+
+
+
+
+function closeRandomNav() {
+  document.getElementById("myRandomnav").style.height = "0%";
+  document.getElementById("SettingsNavID").style.display = "unset";
+  remBlur();
+  myChart.config.data.datasets[0].backgroundColor[0] ="rgba(237,211,240,0.9)";
+  myChart.config.data.datasets[0].backgroundColor[1] ="rgba(218,221,236,0.85)";
+  myChart.config.data.datasets[0].backgroundColor[2] ="rgba(247,225,204,0.85)";
+  myChart.config.data.datasets[0].backgroundColor[3] ="rgba(252,204,204,0.85)";
+  myChart.config.data.datasets[0].backgroundColor[4] ="rgba(229,194,236,0.85)";
+  myChart.config.data.datasets[0].borderColor[0] ="rgba(251,200,211,255)";
+  myChart.config.data.datasets[0].borderColor[1] ="rgba(187,197,250,255)";
+  myChart.config.data.datasets[0].borderColor[2] ="rgba(229,194,236,255)";
+  myChart.config.data.datasets[0].borderColor[3] ="rgba(252,192,217,255)";
+  myChart.config.data.datasets[0].borderColor[4] ="rgba(249,207,208,255)";
+  myChart.update();
+}
+//Blur theme
+function applyBlur()
+{
+    TweenMax.to('.Main-Section', 0.5,{filter:"blur(8px)"});
+};
+function remBlur()
+{
+    TweenMax.to('.Main-Section', 0.5,{filter:"blur(0px)"});
+};
+
+
+
+
+
+
 
 
 
@@ -52,13 +180,10 @@ function changePicture(){
   var mylist = Math.floor(Math.random() * shopNamelist.length);
   function getChanged(){
       document.getElementById('RandomShopName').innerHTML = shopNamelist[mylist];
-      //document.getElementById("RandomShopImg").style.display = "none";
       document.getElementById("RandomShopImg").src="IMG/"+(shopImglist[mylist])+".png";
-      //document.getElementById("RandomShopImg").style.display = "unset";
   }
   getChanged();
 }
-
 
 
 
@@ -86,23 +211,3 @@ function myFunction() {
         console.log( `40000000000000`);
     }
   }
-
-// document.getElementById("GetRandom").addEventListener("input", function() {
-//     if( isPriceCheck(this.value) ) {
-//       console.log( `${this.value}`);
-//     } else {
-//       console.log( `ราคา: ${this.value}` );
-  
-//       if ( this.value < 5) {
-//           console.log( `ซื้อไม่ได้ 5 บาท`);
-//         }
-        
-//       else if (this.value <= 20) {
-//           console.log( `5-20`);
-//       }
-  
-//       else if (this.value < 40) {
-//           console.log( `21-40`);
-//       }
-//     }
-//   });
