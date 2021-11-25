@@ -33,13 +33,28 @@ function openRandomNav() {
   document.getElementById("myRandomnav").style.height = "100%";
 }
 //Random function
+
+// const $el = document.querySelector("RandomShopImg");
+// // Loading finished
+// setTimeout(() => {
+//   // $el.classList.remove("loader");
+//   // document.querySelector("loader").classList.remove("loader");
+//   // $el
+//     // .querySelectorAll(".hide-text")
+//     // .forEach((el) => el.classList.remove("hide-text"));
+// }, 3000);
+
+
+
 function changePicture(){
   var shopImglist = ['R1', 'R2', 'R3'];
   var shopNamelist = ['1', '2', '3'];
   var mylist = Math.floor(Math.random() * shopNamelist.length);
   function getChanged(){
       document.getElementById('RandomShopName').innerHTML = shopNamelist[mylist];
+      document.getElementById("RandomShopImg").style.display = "none";
       document.getElementById("RandomShopImg").src="IMG/"+(shopImglist[mylist])+".png";
+      document.getElementById("RandomShopImg").style.display = "unset";
   }
   getChanged();
 }

@@ -102,15 +102,111 @@ html body {
 .mainRandom-container{
 
 }
-.loading {
+
+#RandomShopImg {
   display: block;
   position: absolute;
   left: 50%;
   top: 50%;
   width: 30%;
   transform: translate(-50%,-50%);
-  background: url(https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif) no-repeat center;
 }
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+	
+  width: 150px;
+	height: 150px;
+	border-style: solid;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: rotate 3s ease-in-out infinite;
+
+  transform: translate(-50%,-50%) rotate(-235deg);
+  transform-origin: center;
+}
+
+@keyframes rotate {
+	0% { 
+		border-width: 50px; 
+	}
+	25% { 
+		border-width: 1px; 
+	}
+	50% { 
+    transform: translate(-50%,-50%) rotate(140deg);
+		border-width: 50px;
+	}
+	75% { 
+		border-width: 1px;
+	}
+	100% { 
+		border-width: 50px;
+	}
+}
+
+img.img-loader {
+    z-index: 2;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Food */
 .Food1{
