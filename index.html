@@ -112,26 +112,14 @@
     <div id="myRandomnav" class="Randomnav">
         <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
         <h1 style="color: white; text-align: center;"> เราขอแนะนำ</h1>
-        <img id="RandomShopImg" src="/IMG/R1.png" onclick="changePicture()">
+        <img id="RandomShopImg" src="IMG/R1.png" onclick="changePicture()">
         <h1 id="RandomShopName" style="color: white; text-align: center;"> ร้านสุดเท่</h1>
 
-        
+
         <button id="myRandomButton" class="" onclick="changePicture()">test</button>
         <div class="mainRandom-container"></div>
     </div>
 
-    <script>
-        function changePicture(){
-            var shopImglist = ['R1', 'R2', 'R3'];
-            var shopNamelist = ['1', '2', '3'];
-            var mylist = Math.floor(Math.random() * shopNamelist.length);
-            function getChanged(){
-                document.getElementById('RandomShopName').innerHTML = shopNamelist[mylist];
-                document.getElementById("RandomShopImg").src="/IMG/"+(shopImglist[mylist])+".png";
-            }
-            getChanged();
-        }
-    </script>
 
     <script>
         var randomScalingFactor = function() {

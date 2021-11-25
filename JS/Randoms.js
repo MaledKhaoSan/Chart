@@ -32,6 +32,24 @@ function closeNav() {
 function openRandomNav() {
   document.getElementById("myRandomnav").style.height = "100%";
 }
+//Random function
+function changePicture(){
+  var shopImglist = ['R1', 'R2', 'R3'];
+  var shopNamelist = ['1', '2', '3'];
+  var mylist = Math.floor(Math.random() * shopNamelist.length);
+  function getChanged(){
+      document.getElementById('RandomShopName').innerHTML = shopNamelist[mylist];
+      document.getElementById("RandomShopImg").src="IMG/"+(shopImglist[mylist])+".png";
+  }
+  getChanged();
+}
+
+
+
+
+
+
+
 
 function myFunction() {
     let x = document.getElementById("PriceInput").value;
