@@ -791,4 +791,8 @@ input:focus ~ .highlight {
       font-size: 10vw;
       white-space: pre;
     }
+    .Form-Label{
+      left:5px;
+      top:10px;
+    }
 }
