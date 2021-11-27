@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Doughnut Chart</title>
+    <title>GinRiDee</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- //Script -->
@@ -36,9 +36,9 @@
 
 <body>
     <section class="Main-Section">
-        <span id="SettingsNavID" class="SettingsNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ตั้งค่า</span>
 
         <div class="container">
+            <span id="SettingsNavID" class="SettingsNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ประเภทอาหาร</span>
             <div style="display: unset;">
                 <img src="IMG/F1.png" class="Food1"  style="z-index: 5;">
                 <img src="IMG/F2.png" class="Food2"  style="z-index: 5;">
@@ -115,7 +115,7 @@
         <h1 class="myRandom-Header"> เราขอแนะนำ</h1>
         <!-- Random.Nav -->
         <h1 id="RandomShopName" class="RandomShopName"> ร้านข้าวมันไก่เจ๊ทองแดง</h1>
-        <div id="loader"></div>
+        <!-- <div id="loader"></div> -->
         <img id="RandomShopImg" class="RandomShopImg" src="IMG/R1.png">
 
         <!-- <button id="myRandomButton" class="" onclick="testttFunction()">test</button> -->
@@ -139,7 +139,7 @@
             type: 'doughnut',
             data: {
             datasets: [{
-                data: [7, 10, 4, 5, 3],
+                data: [5, 7, 5, 17, 7],
                 // data: [{id: 'Sales', nested: {value: 1500}}, {id: 'Purchases', nested: {value: 500}}],
                 backgroundColor: [
                     "rgba(237,211,240,0.9)",

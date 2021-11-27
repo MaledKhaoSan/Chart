@@ -1,7 +1,13 @@
 
 //Side Nav
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  const mediaQuery = window.matchMedia('(min-width: 1024px)')
+  if (mediaQuery.matches) {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  else{
+    document.getElementById("mySidenav").style.width = "350px";
+  }
 }
 
 function closeNav() {
@@ -182,27 +188,27 @@ function getRandomFunction(){
   if (document.getElementById('Food01').checked) {
     if (isPrice >= 20) {
       var noodle1={
-        named:"ร้าน",
+        named:"ร้านก๋วยเตี๋ยว",
         price:"ราคา",
         img:"noodle1",
       }
       var noodle2={
-        named:"ร้าน",
+        named:"ร้านก๋วยเตี๋ยว",
         price:"ราคา",
         img:"noodle2",
       }
       var noodle3={
-        named:"ร้าน",
+        named:"ร้านก๋วยเตี๋ยว",
         price:"ราคา",
         img:"noodle3",
       }
       var noodle4={
-        named:"ร้าน",
+        named:"ร้านก๋วยเตี๋ยว",
         price:"ราคา",
         img:"noodle4",
       }
       var noodle5={
-        named:"ร้าน",
+        named:"ร้านก๋วยเตี๋ยว",
         price:"ราคา",
         img:"noodle5",
       }
@@ -216,37 +222,37 @@ function getRandomFunction(){
     //น้อยกว่า 5 บาท
     if ( isPrice >= 20) {
       var DishMeal1={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal1",
       }
       var DishMeal2={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal2",
       }
       var DishMeal3={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal3",
       }
       var DishMeal4={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal4",
       }
       var DishMeal5={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal5",
       }
       var DishMeal6={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal6",
       }
       var DishMeal7={
-        named:"ร้าน",
+        named:"ร้านอาหารหมอไฟ",
         price:"ราคา",
         img:"DishMeal7",
       }
@@ -259,27 +265,27 @@ function getRandomFunction(){
     // console.log("checked3");
     if ( isPrice >= 30) {
       var Steak1={
-        named:"ร้าน",
+        named:"ร้านสเต๊ก",
         price:"ราคา",
         img:"Steak1",
       }
       var Steak2={
-        named:"ร้าน",
+        named:"ร้านสเต๊ก",
         price:"ราคา",
         img:"Steak2",
       }
       var Steak3={
-        named:"ร้าน",
+        named:"ร้านสเต๊ก",
         price:"ราคา",
         img:"Steak3",
       }
       var Steak4={
-        named:"ร้าน",
+        named:"ร้านสเต๊ก",
         price:"ราคา",
         img:"Steak4",
       }
       var Steak5={
-        named:"ร้าน",
+        named:"ร้านสเต๊ก",
         price:"ราคา",
         img:"Steak5",
       }
@@ -394,7 +400,7 @@ function getRandomFunction(){
     // console.log("checked3");
     if (isPrice <= 5) {
       var Drink5_1={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink5_1",
       }
@@ -403,32 +409,32 @@ function getRandomFunction(){
     
     else if (isPrice <= 25) {
       var Drink25_1={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink25_1",
       }
       var Drink25_2={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink25_2",
       }
       var Drink25_3={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink25_3",
       }
       var Drink25_4={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink25_4",
       }
       var Drink25_5={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink25_5",
       }
       var Drink25_6={
-        named:"ร้านขนมหวาน",
+        named:"ร้านคุณป้าน้ำ",
         price:"ราคา",
         img:"Drink25_6",
       }

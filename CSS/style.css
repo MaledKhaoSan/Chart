@@ -21,14 +21,16 @@ html body {
 /* Side Nav */
 .SettingsNav{
   position:absolute;
-  left: 5%;
-  top: 11%;
+  z-index: 15;
+  left: 48.5%;
+  top: 95%;
   transform: translate(-50%,-50%);
   font-family: 'Kanit', sans-serif; 
   font-size: 1.15vw;
   color: #000000;
   padding-left: 2%; 
 }
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -308,34 +310,12 @@ img.img-loader {
     -moz-box-shadow: 1px 2px 29px 2px rgba(220, 244, 250, 1);
     box-shadow: 1px 2px 29px 2px rgba(220, 244, 250, 1);
   }
-
-
-  
-@media only screen and (max-width: 768px) {
-  .container {
-    transform: scale(1);
-    width: 100vh;
-    height: 85vh;
-    background-color: chartreuse;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .container {
-    width: 100%;
-    height: 100vh;
-    margin: 0vh;
-    background-color: rgb(25, 0, 255);
-  }
-}
-
-
 .main-graph-container{
   z-index: 12; 
   position: absolute; 
   left: 50%;
-  top: 52%;
-  width: 48%;
+  top: 45%;
+  width: 46%;
   transform: translate(-50%,-50%);
   opacity: 0%;
   display: none;
@@ -345,14 +325,14 @@ img.img-loader {
 .MainGum{
   position: absolute;
   width: 0%;
-  top: 59.2%;
+  top: 54.2%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .MainStudent{
   position: absolute;
   width: 65%;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -360,7 +340,7 @@ img.img-loader {
 .MainStudent_animated1{
   position: absolute;
   width: 65%;
-  top: 60%;
+  top: 55%;
   left: 50.0%;
   transform: translate(-50%, -50%);
 }
@@ -368,7 +348,7 @@ img.img-loader {
 .MainStudent_animated2{
   position: absolute;
   width: 65%;
-  top: 60%;
+  top: 55%;
   left: 50.0%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -679,4 +659,136 @@ input:focus ~ .highlight {
 @keyframes inputHighlighter {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    transform: scale(1);
+    width: 100vh;
+    height: 85vh;
+    /* background-color: chartreuse; */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    margin: 0vh;
+    /* background-color: rgb(25, 0, 255); */
+  }
+
+
+
+  .main-graph-container{
+    left: 50%;
+    top: 40%;
+    width: 100%;
+  }
+
+
+
+
+  .MainGum{
+    width: 0%;
+    top: 45%;
+    left: 50%;
+  }
+  .MainStudent,
+  .MainStudent_animated1,
+  .MainStudent_animated2{
+    width: 125%;
+    top: 45.5%;
+  }
+  
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    
+    .pink-bubble {
+      width: 290px;
+      height: 280px;
+    }
+
+    .small-p-bubble {
+      left: -30px;
+      top: 70px;
+    }
+    
+    .blue-bubble {
+      width: 250px;
+      height: 250px;
+      left: -90px;
+      top: 575px;
+    }
+    
+    .small-b-bubble {
+      width: 160px;
+      height: 160px;
+      right: -60px;
+      bottom: -20px;
+    }
+    
+    /* Food */
+    .Food1{
+      width: 20%;
+      left: -20%;
+      top: 16%;
+    }
+
+
+    .Food2{
+      width: 50%;
+      left: 5%;
+      top: 86%;
+    }
+
+
+    .Food3{
+      width: 37%;
+      left: 27%;
+      top: -40%;
+    }
+
+    .Food4{
+      width: 40%;
+      top: 90%;
+    }
+
+    .Food5{
+      width: 60%;
+      left: 130%;
+      top: -25%;
+    }
+
+    .SettingsNav{
+      top: 70%; 
+      font-size: 2em; 
+      color: #000000;
+      padding: 0px;
+      white-space: pre;
+    }
+
+    .RandomShopImg {
+      left: 50%;
+      top: 55%;
+      width: 90%;
+    }
+
+    .myRandom-Header{
+      top: 17vh;
+      margin: -0.6em;
+      white-space: pre;
+    }
+
+    .RandomShopName{
+      font-size: 10vw;
+      white-space: pre;
+    }
 }

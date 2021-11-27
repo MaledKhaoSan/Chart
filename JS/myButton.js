@@ -26,11 +26,11 @@ document.getElementById("PriceInput").addEventListener("input", function() {
   if( isPriceCheck(this.value) ) {
     // console.log( `${this.value}`);
 
-    myChart.config.data.datasets[0].data[0] = 7;
-    myChart.config.data.datasets[0].data[1] = 10;
-    myChart.config.data.datasets[0].data[2] = 4;
-    myChart.config.data.datasets[0].data[3] = 5;
-    myChart.config.data.datasets[0].data[4] = 3;
+    myChart.config.data.datasets[0].data[0] = 5;
+    myChart.config.data.datasets[0].data[1] = 7;
+    myChart.config.data.datasets[0].data[2] = 5;
+    myChart.config.data.datasets[0].data[3] = 17;
+    myChart.config.data.datasets[0].data[4] = 7;
     myChart.update();
     
   } else {
@@ -44,14 +44,40 @@ document.getElementById("PriceInput").addEventListener("input", function() {
         myChart.config.data.datasets[0].data[3] = 0;
         myChart.config.data.datasets[0].data[4] = 0;
         myChart.update();
-      }
-      
+    }
     else if (this.value <= 20) {
-        // console.log( `5-20`);
+        myChart.config.data.datasets[0].data[0] = 5;
+        myChart.config.data.datasets[0].data[1] = 7;
+        myChart.config.data.datasets[0].data[2] = 0;
+        myChart.config.data.datasets[0].data[3] = 7;
+        myChart.config.data.datasets[0].data[4] = 1;
+        myChart.update();
     }
 
-    else if (this.value < 40) {
-        // console.log( `21-40`);
+    else if (this.value <= 25) {
+        myChart.config.data.datasets[0].data[0] = 5;
+        myChart.config.data.datasets[0].data[1] = 7;
+        myChart.config.data.datasets[0].data[2] = 0;
+        myChart.config.data.datasets[0].data[3] = 13;
+        myChart.config.data.datasets[0].data[4] = 7;
+        myChart.update();
+    }
+
+    else if (this.value <= 30) {
+        myChart.config.data.datasets[0].data[0] = 5;
+        myChart.config.data.datasets[0].data[1] = 7;
+        myChart.config.data.datasets[0].data[2] = 5;
+        myChart.config.data.datasets[0].data[3] = 17;
+        myChart.config.data.datasets[0].data[4] = 7;
+        myChart.update();
+    }
+    else if (this.value > 30) {
+        myChart.config.data.datasets[0].data[0] = 5;
+        myChart.config.data.datasets[0].data[1] = 7;
+        myChart.config.data.datasets[0].data[2] = 5;
+        myChart.config.data.datasets[0].data[3] = 17;
+        myChart.config.data.datasets[0].data[4] = 7;
+        myChart.update();
     }
   }
 });
