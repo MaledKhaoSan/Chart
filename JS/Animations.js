@@ -1,16 +1,11 @@
-window.onload = function() {
-	if(!window.location.hash) {
-		window.location = window.location + '#Information';
-		window.location.reload();
-	}
-}
+
 
 
 ScrollTrigger.matchMedia({
     //Laptop
     "(min-width: 1024px)": function() {
     var tl = gsap.timeline();
-        tl.to(".MainText", 1.8,{top: "25%", width:"31%", rotation:"0"},"<")
+        tl.to(".MainText", 1.8,{top: "22%", width:"31%", rotation:"0"},"<")
         tl.to(".MainStudent_animated0, .MainStudent_animated1", 0, {autoAlpha:0}, ">+2");
         tl.to(".MainStudent_animated2", 0, {autoAlpha:1}, "<");
 
