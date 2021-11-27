@@ -37,6 +37,7 @@
 <body>
     <section class="Main-Section">
         <span id="SettingsNavID" class="SettingsNav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ตั้งค่า</span>
+
         <div class="container">
             <div style="display: unset;">
                 <img src="IMG/F1.png" class="Food1"  style="z-index: 5;">
@@ -103,7 +104,7 @@
                     </div>
 
 
-                    <button id="myRandomButton" class="button button1" onclick="myFunction(), openRandomNav()">Green</button>
+                    <button id="myRandomButton" class="button button1" onclick="getRandomFunction(), openRandomNav()">Green</button>
                 </div>
             </div>
         </div>
@@ -115,9 +116,9 @@
         <!-- Random.Nav -->
         <h1 id="RandomShopName" class="RandomShopName"> ร้านข้าวมันไก่เจ๊ทองแดง</h1>
         <div id="loader"></div>
-        <img id="RandomShopImg" class="RandomShopImg" src="IMG/R1.png" onclick="changePicture()">
+        <img id="RandomShopImg" class="RandomShopImg" src="IMG/R1.png">
 
-        <button id="myRandomButton" class="" onclick="changePicture()">test</button>
+        <!-- <button id="myRandomButton" class="" onclick="testttFunction()">test</button> -->
         <div class="mainRandom-container"> 
         </div>
 

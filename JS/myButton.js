@@ -24,7 +24,7 @@ const isPriceCheck = str => !str.trim().length;
 
 document.getElementById("PriceInput").addEventListener("input", function() {
   if( isPriceCheck(this.value) ) {
-    console.log( `${this.value}`);
+    // console.log( `${this.value}`);
 
     myChart.config.data.datasets[0].data[0] = 7;
     myChart.config.data.datasets[0].data[1] = 10;
@@ -34,10 +34,10 @@ document.getElementById("PriceInput").addEventListener("input", function() {
     myChart.update();
     
   } else {
-    console.log( `ราคา: ${this.value}` );
+    // console.log( `ราคา: ${this.value}` );
 
     if ( this.value < 5) {
-        console.log( `ซื้อไม่ได้ 5 บาท`);
+        // console.log( `ซื้อไม่ได้ 5 บาท`);
         myChart.config.data.datasets[0].data[0] = 0;
         myChart.config.data.datasets[0].data[1] = 0;
         myChart.config.data.datasets[0].data[2] = 0;
@@ -47,11 +47,11 @@ document.getElementById("PriceInput").addEventListener("input", function() {
       }
       
     else if (this.value <= 20) {
-        console.log( `5-20`);
+        // console.log( `5-20`);
     }
 
     else if (this.value < 40) {
-        console.log( `21-40`);
+        // console.log( `21-40`);
     }
   }
 });
