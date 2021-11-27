@@ -796,6 +796,7 @@ input:focus ~ .highlight {
       margin: auto;
     }
     #PriceInput{
-      font-size: 2em;
+      font-size: 5vw;
+      padding: 5px 5px 5px 8%;
     }
 }
