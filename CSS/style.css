@@ -795,4 +795,7 @@ input:focus ~ .highlight {
       left:5px;
       margin: auto;
     }
+    #PriceInput{
+      font-size: 2em;
+    }
 }
