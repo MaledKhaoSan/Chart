@@ -6,10 +6,15 @@ $(document).ready(function() {
 
 	// Will wait for everything on the page to load.
 	$(window).bind('load', function() {
-        $('.Loadercontainer, .loader').css({'display':'none'})
+        var LoaderRemover = gsap.timeline();
+            LoaderRemover.to(".Loadercontainer, .loader", 0.9,{opacity: 0},">+2")
+            LoaderRemover.set(".Loadercontainer, .loader",{display: "none"},">")
 		setTimeout(function() {
-			$('.Loadercontainer, .loader').css({'display':'none'})
 			
+            var LoaderRemover = gsap.timeline();
+                LoaderRemover.to(".Loadercontainer, .loader", 0.9,{opacity: 0},">+2")
+                LoaderRemover.set(".Loadercontainer, .loader",{display: "none"},">")
+            $('.Loadercontainer, .loader').css({'display':'none'})
 		}, 29000)
 	})
 })
