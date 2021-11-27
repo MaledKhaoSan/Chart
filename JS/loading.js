@@ -14,7 +14,6 @@ $(document).ready(function() {
             var LoaderRemover = gsap.timeline();
                 LoaderRemover.to(".Loadercontainer, .loader", 0.9,{opacity: 0},">+2")
                 LoaderRemover.set(".Loadercontainer, .loader",{display: "none"},">")
-            //$('.Loadercontainer, .loader').css({'display':'none'})
 		}, 29000)
 	})
 })
