@@ -793,6 +793,6 @@ input:focus ~ .highlight {
     }
     .Form-Label{
       left:5px;
-      top:10px;
+      margin: auto;
     }
 }
