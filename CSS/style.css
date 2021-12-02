@@ -436,7 +436,7 @@ canvas {
 
 /* Random Box */
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #ffffff; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -444,14 +444,18 @@ canvas {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
+  border-radius: 1%;
+  position: relative;
 }
 
 .button1 {
   background-color: white; 
   color: black; 
-  border: 2px solid #4CAF50;
+  border: 2px solid #9bdaff;
+  margin: 15px 2px;
+  width: 100%;
+  height: max-content;
 }
 
 

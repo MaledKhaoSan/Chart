@@ -222,37 +222,37 @@ function getRandomFunction(){
     //น้อยกว่า 5 บาท
     if ( isPrice >= 20) {
       var DishMeal1={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal1",
       }
       var DishMeal2={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal2",
       }
       var DishMeal3={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal3",
       }
       var DishMeal4={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal4",
       }
       var DishMeal5={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal5",
       }
       var DishMeal6={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal6",
       }
       var DishMeal7={
-        named:"ร้านอาหารหมอไฟ",
+        named:"ร้านอาหารหม้อไฟ",
         price:"ราคา",
         img:"DishMeal7",
       }
@@ -448,7 +448,7 @@ function getRandomFunction(){
   
   else if(document.getElementById('Food01','Food02','Food03','Food04','Food05').checked === false){
     var No01={
-      named:"ไม่มี-1",
+      named:"ไม่มีร้านไหนตรงสเปคเลย",
       img:"Empty01",
     }
     MyRandomArray.push(No01);
